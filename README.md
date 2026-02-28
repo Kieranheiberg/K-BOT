@@ -10,7 +10,7 @@ Each versions necessary Python libraries can be installed via respective require
 Portable 3D-printed bench top optical density (OD) sensor. Utilizes LabJack U3 data acquisition device (DAQ) to power an LED and collect analog voltage values from K-Bot. Analog voltages converted to OD via species specific calibration curves. DAQ is connected to laptop running terminal based RunPhotosensor application, that uses Export_csv.py file in backend. RunPhotosensor operation consists of user specifying bacteria species to be measured and then collecting as many samples as needed. Avaliable bacterial species to be measured determined by Equations.json file that contains the species specific calibration equations to convert voltage to OD.
 
 ## K-Bot Auto
-K-Bot Auto is discrete K-bot sensor integrated with oscillating shaker and IR LED panel for autonomous multiday and multisample (up to 4) experiments. K-bot Auto uses Seeed XIAO ESP32S3 microcontroller with built-in wifi and Bluetooth capabilities for modulating component timing and for real time streaming of OD values to online ThingSpeak database. 
+K-Bot Auto is discrete K-bot sensor integrated with oscillating shaker and IR LED panel for autonomous multiday and multisample (up to 4) experiments. K-bot Auto uses Seeed XIAO ESP32S3 microcontroller with built-in wifi and Bluetooth capabilities for modulating component timing and for real time streaming of OD values to online ThingSpeak database.  
 
 Uses LED panel for photosynthetic growth of bacteria, oscillating shaker to maitain sample homogenity, IoTrealy to modulate timing, and Hall effec sensor to determine osciallator position (Only want to take readings at apex of shaker oscillation for greatest precision). 
 
