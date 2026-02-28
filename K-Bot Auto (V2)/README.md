@@ -1,4 +1,4 @@
-# V2 Cloud
+# K-Bot Auto 
 Internet enabled and optimized OD sensor. 
 Equipment list:
 - Seeed XIAO ESP32S3 microcontroller with built-in wifi and Bluetooth capabilities
@@ -6,13 +6,11 @@ Equipment list:
 ![alt text](TubeHolder.png)
 - TEMT6000 Photosensor
 - 3D printed photosensor holder [or glue to secure photosensor]
-
-
 - 591 nm LED [C503B-ACN-CY0Z0252-030]
 - variable resistor (Need between 220 - 330 Ohms for optimal range of volatage values)
 - Wiring
 
-Experimental paarameteres set by setExperimentalParameters.py script. A Seeed XIAO ESP32S3 microcontroller with built-in wifi and Bluetooth capabilities reads these values and then sets them as parameters for timing. Seeed controls power to LEDs and connected devices, reads voltage from photosensor, and manages timing of connected devices. All referencce of Seeed in this document will be referring to the Seeed XIAO ESP32S3 microntroller. Seeed has flexible pins that can be specified as digital or analog. Digital means on or off. Analog means variable value. LED and photosensor connected and powered by pin set to digital output (3.3V). Voltage from photosensor read by pin set to analog input. 
+Experimental parameteres set by setExperimentalParameters.py script. A Seeed XIAO ESP32S3 microcontroller with built-in wifi and Bluetooth capabilities reads these values and then sets them as parameters for timing. Seeed controls power to LEDs and connected devices, reads voltage from photosensor, and manages timing of connected devices. All referencce of Seeed in this document will be referring to the Seeed XIAO ESP32S3 microntroller. Seeed has flexible pins that can be specified as digital or analog. Digital means on or off. Analog means variable value. LED and photosensor connected and powered by pin set to digital output (3.3V). Voltage from photosensor read by pin set to analog input. 
 
 # setExperimentalParameters.py
 User prompted for:
@@ -32,3 +30,18 @@ Voltage values are uploaded to Thingspeak channel (free IoT platform run by MATL
 ## Project Libraries
 All necessary Python libraries can be installed with the following command:
 **<p align="center"> pip install -r requirements_VWCloud.txt </p>**  
+
+## Timing
+Functionality/timing all managed via Seeed microcontroller and is as follows:
+
+1. Seeed board will turn on IoT relay (and therefore LED array and orbital shaker)
+2. Wait preset measurement interval time (tinterval in Thingspeak channel)
+4. IoT relay turned off via Seeed pin set to digital output (and therefore turns off LED array and orbital shaker)
+5. Measurement LED (for determining OD) turned on via Seeed pin set to digital output
+6. Photosensor voltage value measured via Seeed pin set to analog input (measured voltage is proportional to OD of sample)
+7. Voltage value uploaded to online ThingSpeak channel (field 1)
+8. Seeed turns off measurement LED
+9. Restarts orbital shaker and growth LED array by turning on IoT relay
+10. Repeat until Max Num or Max Time reached (set by setExperimentalParameters.py or by hard-coding code.py in CIRCUITPY folder of Seeed)
+11. LED blinks 4x times to indicate termination then turns off
+    
