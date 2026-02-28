@@ -1,9 +1,8 @@
-# OD Sensor
-Used simple electronics and 3D printed parts to make an optical density sensor for measuring optical density (OD) of anaerobic bacteria in test tubes. OD Sensor works by shining an LED through a 3D-printed tube holder to a Photosensor on the opposing side. Photosensor returns a voltage value that is proportional to the OD of the sample.
-Photosensor functions by acting as variable resistor that responds to amount of light received.  
+# K-Bot Optical Denisty Sensor
+K-Bot and K-Bot Auto are Optical density (OD) sensors for measuring the OD of anaerobic bacteria directly within growth vessel. Both use a 3D printed tube holder with an LED and photosensor on opposing side, where the photosensor outputs a voltage value that is converted to the OD of the sample by a species specific calibration equation. K-Bot Auto is advanced version of OD sensor that is integrated with other lab equipment for autonomous multi-day experiments.
 
 ## Project Libraries
-Each versions (K-Bot vs. K-bot Auto) necessary Python libraries can be installed via requirements.txt. 
+Each versions necessary Python libraries can be installed via respective requirements.txt file. Root repo requirements.txt install all libraries for both K-Bot and K-Bot Auto. 
 **<p align="center"> pip install -r requirements.txt </p>**  
 
 
