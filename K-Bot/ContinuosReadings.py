@@ -9,7 +9,7 @@ import time
 dev = u3.U3()
 
 # Set FIO6 as a digital output and send 3.3V to the LED
-dev.setDOState(6, 0) #Set FIO6 output to digital and high in one function; Sens power to LED red plugged into FIO7
+dev.setDOState(6, 1) #Set FIO6 output to digital and high in one function; Sens power to LED red plugged into FIO7
 
 
 # Read the photosensor output from AIN0 (connected to the sensor output)
