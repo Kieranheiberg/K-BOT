@@ -1,5 +1,5 @@
-:: Navigate to the directory where your virtual environment and Python file are located
-cd "C:\Users\kiera\OneDrive\Documents\GitHub\Photosensor\K-Bot"
+:: Navigate to the directory where this .bat file is located
+cd /d "%~dp0"
 
 :: Run the Python script
 python Export_csv.py
