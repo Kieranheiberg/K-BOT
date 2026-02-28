@@ -1,5 +1,5 @@
-# K-Bot Optical Denisty Sensor
-K-Bot and K-Bot Auto are Optical density (OD) sensors for measuring the OD of anaerobic bacteria directly within growth vessel. Both use a 3D printed tube holder with an LED and photosensor on opposing side, where the photosensor outputs a voltage value that is converted to the OD of the sample by a species specific calibration equation. K-Bot Auto is advanced version of OD sensor that is integrated with other lab equipment for autonomous multi-day experiments.
+# K-Bot Optical Denisty (OD) Sensor
+K-Bot and K-Bot Auto are custom devices for measuring the OD of anaerobic bacteria directly within growth vessel. Both use a 3D printed tube holder with an LED and photosensor on opposing side, where the photosensor outputs a voltage value that is converted to the OD of the sample by a species specific calibration equation. K-Bot Auto is advanced version of OD sensor that is integrated with other lab equipment for autonomous multi-day experiments.
 
 ## Project Libraries
 Each versions necessary Python libraries can be installed via respective requirements.txt file. Root repo requirements.txt install all libraries for both K-Bot and K-Bot Auto. 
