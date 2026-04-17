@@ -2,7 +2,7 @@
 K-BOT is custom built optical density densor ($OD$) for meausuring the $OD_{600}$ of bacteria grown anaerobically in either Hungate or Bulch tubes. K-BOT works by shining an LED through a 3D-printed tube holder to a Photosensor on the opposing side. 
 
 ## Operation
-Software installation and setup instruction below.  
+Software installation and setup instruction in **Software Configuration** section.    
 1. Ensure OD Sensor is plugged into laptop  USB port and you can see yellow LED inside the device is on.
 2. Double click **RunPhotosensor.bat** shortcut (On desktop of laptop)  
 Terminal will output: 
