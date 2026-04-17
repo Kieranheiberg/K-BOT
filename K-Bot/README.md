@@ -2,7 +2,8 @@
 K-BOT is custom built optical density densor ($OD$) for meausuring the $OD_{600}$ of bacteria grown anaerobically in either Hungate or Bulch tubes. K-BOT works by shining an LED through a 3D-printed tube holder to a Photosensor on the opposing side. 
 
 ## Operation
-1. Ensure OD Sensor is plugged into lab laptop  USB port and you can see yellow LED inside the device is on. Full program is only avaliable on  lab laptop by platereaders
+Software installation and setup instruction below.  
+1. Ensure OD Sensor is plugged into laptop  USB port and you can see yellow LED inside the device is on.
 2. Double click **RunPhotosensor.bat** shortcut (On desktop of laptop)  
 Terminal will output: 
 ```bash
@@ -63,8 +64,8 @@ To add a new species, open *Equations.json* and enter name followed by mathemati
 New species should now be avaliable within *RunPhotosensor.bat*. Ensure not to leave comma after final entry as this will throw an error when trying to interpret file.
 
 ## Software Configuration
-If you want to use K-BOT with a different computer follow the below steps:
-1. Download *RunPhotosensor.bat*, *Export_csv.py*, *Equations.json* from: https://github.com/Kieranheiberg/Photosensor
+If you want to setup K-BOT software to run on personal computer follow the below steps:
+1. Download *RunPhotosensor.bat*, *Export_csv.py*, *Equations.json* from: https://github.com/Kieranheiberg/K-BOT
 2. *Export_csv.py* and *Equations.json* need to saved to the same folder. *RunPhotosensor.bat* can exist anyway         [Suggested on desktop]
 3. Edit *RunPhotosensor.bat*  (Right click and select "Edit in Notepad") and change directory to folder containing *Export_csv.py* and *Equations.json* 
 ```bash
@@ -99,16 +100,16 @@ Diego Alba Burbano, Michael Guzman, Jackson Comes, Amanda Roberts, and Margaret 
 #### Hardware
 1. If LED blinking, flickering or inconsistent:
   - Take off case and make sure wires connecting LED to red LabJack device is not being bent akwardly by the case
-  - Verify wires connected correctly. Bold is LED terminal and [ ] is the LabJack device terminal name.
+  - Verify wires connected correctly. Formatting below is **Bold** = LED terminal and [ ] = LabJack device terminal name.
     - **Negative** ->  [FI06]
     - **Positive** -> [GND]
 2. If receiving a constant OD value:
   - Ensure that the wires connecting to the photosensor are secure. If loose use screwdriver to tighten corresponding screw terminal.
-  - Verify wires are connected correclty. Bold is photosensor port name and [ ] is the LabJack device terminal name.
+  - Verify wires are connected correctly. Formatting below is **Bold** = LED terminal and [ ] = LabJack device terminal name.
     - **VCC** to [VS]
     - **GND** to [GND]
     - **OUT** to [AIN0]. 
-  - Use LJControlPanel to see voltage values at each ports and veridy they are accurate (LJControlPanel is part of LabJack install package; Instructions for downloading in LabJack_U3_Documentation.docx in repository)
+  - Use LJControlPanel to see voltage values at each ports and verify they are accurate (LJControlPanel is part of LabJack install package; Instructions for downloading in  K-Bot/Misc/LabJack_U3_Documentation.docx)
 
 
 #### Software
@@ -116,7 +117,7 @@ Diego Alba Burbano, Michael Guzman, Jackson Comes, Amanda Roberts, and Margaret 
 ```bash
 'Device not found. Test Voltage set to 1':
 ```
-  - LabJack device is not being found by the computer. Ensure device is plugged into computer properly. Program will still run but Voltage will be set to 1 V permanently rather then variable depending on OD of sample. Designed for troubleshooting and debugging code without device nearby.
+  - LabJack device is not being found by the computer. Ensure device is plugged into computer properly. If still not found restart laptop. K-BOT program will still run but Voltage will be permanently set to 1 V  rather then a function of sample OD. This feature is designed for troubleshooting and debugging code without device nearby.
 
 2. If *RunPhotosensor.bat* not working, open in notepad and make sure file directory is set to folder containing *Export_csv.py* and *Equations.json*
 ```bash 
