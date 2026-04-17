@@ -71,12 +71,12 @@ If you want to setup K-BOT software to run on personal computer follow the below
 ```bash
 cd "C:\Users\kiera\OneDrive\Documents\GitHub\Photosensor\V1 Labjack" #Set to folder containing Export_csv.py and Equations.json
 ```
-4. Create Conda virtual enviroment named labjack uaing terminal. Requires having Anaconda Navigator installed:
+4. Create Conda virtual enviroment named labjack using terminal. Requires having Anaconda Navigator installed:
 https://www.anaconda.com/products/navigator 
 ```bash
 conda create --n labjack
 ```
-5. Install LabJackPython package labjack virtual enviroment. 
+5. Install LabJackPython package within created labjack virtual enviroment. 
 ```bash
 conda activate labjack
 (labjack) pip install LabjackPython
