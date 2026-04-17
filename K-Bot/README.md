@@ -51,9 +51,9 @@ Program finished
 11. You can now safely close terminal window. Rerun **RunPhotosensor.bat** shortcut to start another round of data collection
  
 ## Add Species (Calibration Equations)
-*Equations.json* is an editable file where all bacteria species calibration equations are stored dynamically. *Equations.json* is saved in photosensor folder on plate reader laptop desktop.  
+*Equations.json* is an editable file where all bacteria species calibration equations are stored dynamically. *Equations.json* needs to be saved in same directory as *Export_csv.py*.  
 
-To add a new species, open *Equations.json* and enter name followed by mathematical equation (in python code format) for new species. Example of full *Equations.json* file can be seen below:
+To add a new species, open *Equations.json* and enter name followed by mathematical equation for new species (in executable python code format). Example of full *Equations.json* file can be seen below:
 ```json
 {
     "redrum": "-0.586 * math.log(Voltage) + 0.2872",
@@ -61,7 +61,7 @@ To add a new species, open *Equations.json* and enter name followed by mathemati
     "ln": "math.log(Voltage)"
 }
 ```
-New species should now be avaliable within *RunPhotosensor.bat*. Ensure not to leave comma after final entry as this will throw an error when trying to interpret file.
+New species entered will be avaliable within *RunPhotosensor.bat*. Ensure not to leave comma after final entry as this will throw an error when trying to interpret file.
 
 ## Software Configuration
 If you want to setup K-BOT software to run on personal computer follow the below steps:
